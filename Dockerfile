@@ -4,7 +4,7 @@ FROM node:12-alpine
 # set maintainer
 LABEL maintainer "agnibrata"
 
-ENV MESSAGES
+ENV MESSAGES "Agni"
 
 WORKDIR /app
 COPY index.js package.json /app/
