@@ -1,0 +1,19 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1
+kind: Deployment
+metadata:
+  name: node-k8s
+spec:
+  selector:
+    matchLabels:
+      app: node-k8s
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: node-k8s
+    spec:
+      containers:
+      - name: node-k8s
+        image: agnibrata/an-pipeline:${BUILD_NUMBER}
+        ports:
+        - containerPort: 8000
