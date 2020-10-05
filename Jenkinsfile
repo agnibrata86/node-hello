@@ -35,4 +35,9 @@ node {
             app.push("${env.BUILD_NUMBER}")
         }
     }
+
+    stage('Deploy k8s') {
+        /* Finally, deploy to k8s: */
+         sh 'kubectl apply -f deployment.yml,service.yml'
+    }
 }
