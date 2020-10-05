@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: node-k8s
-        image: agnibrata/an-pipeline:${BUILD_NUMBER}
+        image: agnibrata/an-pipeline:${env.BUILD_NUMBER}
         ports:
         - containerPort: 8000
