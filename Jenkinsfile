@@ -1,10 +1,9 @@
 node {
     def app
 
-    stage('Initialize') {
-        def dockerHome = tool 'MyDocker'
-        env.PATH = "${dockerHome}/bin:${env.PATH}"
-    }
+    /* stage('Initialize') {
+     *   def dockerHome = tool 'MyDocker'
+     *   env.PATH = "${dockerHome}/bin:${env.PATH}"} */
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
@@ -15,7 +14,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("agnibrata86/node-hello")
+        app = docker.build("agnibrata/an-pipeline")
     }
 
     stage('Test image') {
