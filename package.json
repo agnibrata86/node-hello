@@ -1,0 +1,23 @@
+{
+  "name": "node-hello",
+  "version": "1.0.0",
+  "description": "Sample hello Node project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agnibrata86/node-hello.git"
+  },
+  "keywords": [
+    "node-hello"
+  ],
+  "author": "Agnibrata",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agnibrata86/node-hello/issues"
+  },
+  "homepage": "https://github.com/agnibrata86/node-hello#readme"
+}
